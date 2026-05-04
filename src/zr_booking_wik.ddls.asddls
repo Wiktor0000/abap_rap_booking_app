@@ -12,9 +12,9 @@ define root view entity ZR_BOOKING_WIK
     end_datetime       as EndDateTime,
     status             as Status,
     
-    /* Adhoc: wyciągamy nazwę zasobu, żeby "pięknie działało" w UI */
+
     _Resource.ResourceID as ResourceName, 
     
-    /* Association */
+
     _Resource
 }

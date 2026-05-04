@@ -15,8 +15,10 @@ define root view entity ZC_BOOKING_WIK
    @UI.hidden: true
    key BookingUUID,
 
-  @UI.lineItem:       [ { position: 20, label: 'ID Zasobu' } ]
+@UI.lineItem:       [ { position: 20, label: 'ID Zasobu' } ]
   @UI.identification: [ { position: 20, label: 'ID Zasobu' } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZC_OFFICE_RES_VH', element: 'ResourceUUID' } }]
+  @ObjectModel.text.element: ['ResourceName'] 
   ResourceUUID,
 
   @UI.lineItem:       [ { position: 30, label: 'Pracownik' } ]
