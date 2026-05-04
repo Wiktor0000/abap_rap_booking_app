@@ -1,0 +1,24 @@
+managed implementation in class zbp_r_booking_wik unique;
+strict;
+define behavior for ZR_BOOKING_WIK alias Booking
+persistent table ZBOOKINGS_WIK
+lock master
+authorization master ( instance )
+{
+  create;
+  update;
+  delete;
+
+  mapping for ZBOOKINGS_WIK
+  {
+    BookingUUID     = booking_uuid;
+    ResourceUUID    = res_uuid;
+    EmployeeID      = employee_id;
+    StartDateTime   = start_datetime;
+    EndDateTime     = end_datetime;
+    Status          = status;
+   }
+
+  field ( numbering: managed, readonly : update ) BookingUUID;
+  field ( readonly ) ResourceName;
+}

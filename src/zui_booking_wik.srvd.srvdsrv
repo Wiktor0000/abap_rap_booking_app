@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service Definition for Bookings'
+define service ZUI_BOOKING_WIK {
+  expose ZC_BOOKING_WIK    as Booking;
+  expose ZC_OFFICE_RES_WIK as Resource;
+}
